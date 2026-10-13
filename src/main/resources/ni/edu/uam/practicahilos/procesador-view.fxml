@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="380.0" prefWidth="520.0" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.practicahilos.ProcesadorController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <Label text="Procesador de registros">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="lblEstado" text="Esperando inicio" />
+
+        <ProgressBar fx:id="barraProgreso" prefWidth="420.0" progress="0.0" />
+
+        <Label fx:id="lblPorcentaje" text="0%" />
+
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Button fx:id="btnIniciar" mnemonicParsing="false" onAction="#iniciarProceso" text="Iniciar" />
+                <Button fx:id="btnDetener" mnemonicParsing="false" onAction="#detenerProceso" text="Detener" disable="true" />
+                <Button fx:id="btnReiniciar" mnemonicParsing="false" onAction="#reiniciarProceso" text="Reiniciar" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
